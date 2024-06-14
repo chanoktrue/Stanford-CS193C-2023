@@ -12,7 +12,7 @@ struct ContentView: View {
         HStack{
             CardView(isFaceUp: true)
             CardView()
-            CardView(isFaceUp: true)
+            CardView()
             CardView()
         }
         .foregroundColor(.orange)
@@ -31,7 +31,7 @@ struct CardView: View {
                 base.strokeBorder(lineWidth: 2)
                 Text("👻").font(.largeTitle)
             }else{
-                base.fill()
+                RoundedRectangle(cornerRadius: 12)
             }
         }
         .onTapGesture {
